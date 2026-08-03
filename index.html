@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess the YouTube Video</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrap">
+    <header>
+      <h1>🎬 Guess the Video</h1>
+      <p class="sub">Watch the mystery clip, find it yourself online, then paste the link to guess.</p>
+      <div class="score">Score: <span id="score">0</span> / <span id="total">0</span></div>
+    </header>
+
+    <div class="player-card">
+      <div class="player-frame">
+        <iframe
+          id="player"
+          src=""
+          title="Mystery video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <div class="guess-card">
+      <label for="guessInput">Paste the YouTube link you think this is:</label>
+      <div class="guess-row">
+        <input type="text" id="guessInput" placeholder="https://www.youtube.com/watch?v=..." autocomplete="off">
+        <button id="submitGuess">Guess</button>
+      </div>
+      <div id="result" class="result"></div>
+      <button id="nextBtn" class="next-btn" hidden>Next Video ➜</button>
+    </div>
+
+    <footer>
+      <p>Edit <code>videos.js</code> to change the pool of possible videos.</p>
+    </footer>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="videos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
